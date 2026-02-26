@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  
+  --color-luxury-black: #0A0A0A;
+  --color-luxury-beige: #D4C9B0;
+  --color-luxury-white: #F5F5F5;
+  --color-luxury-gray: #1A1A1A;
+  --color-luxury-gold: #C5A059;
+}
+
+@layer base {
+  body {
+    @apply bg-luxury-black text-luxury-white font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+  }
+  
+  .btn-primary {
+    @apply bg-luxury-beige text-luxury-black px-8 py-3 rounded-full font-medium transition-all hover:bg-luxury-white hover:scale-105 active:scale-95;
+  }
+  
+  .btn-outline {
+    @apply border border-luxury-beige text-luxury-beige px-8 py-3 rounded-full font-medium transition-all hover:bg-luxury-beige hover:text-luxury-black;
+  }
+
+  .nav-link {
+    @apply text-sm uppercase tracking-widest text-luxury-white/60 hover:text-luxury-white transition-colors;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}

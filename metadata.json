@@ -1,0 +1,7 @@
+{
+  "name": "Remix: STYLE.AI",
+  "description": "AI-Powered Fashion Recommendation System with luxury styling and smart matching.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
